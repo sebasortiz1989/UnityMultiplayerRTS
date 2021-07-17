@@ -6,7 +6,6 @@ using UnityEngine;
 public class Targeter : NetworkBehaviour
 {
     private Targetable target;
-
     public Targetable GetTarget() { return target; }
 
     #region Server

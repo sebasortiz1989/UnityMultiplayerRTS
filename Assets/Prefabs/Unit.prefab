@@ -30,6 +30,36 @@ Transform:
   m_Father: {fileID: 8218323256760932367}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5346424519848601390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3988898454089406543}
+  m_Layer: 0
+  m_Name: ProjectileFiringPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3988898454089406543
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346424519848601390}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.593, z: 2.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8218323256760932367}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7680895039103846553
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,6 +159,7 @@ GameObject:
   - component: {fileID: 351372037156972533}
   - component: {fileID: 1282868580111540982}
   - component: {fileID: 6230287498340296810}
+  - component: {fileID: -808231411788092768}
   m_Layer: 0
   m_Name: Unit
   m_TagString: Untagged
@@ -150,6 +181,7 @@ Transform:
   - {fileID: 8468983952958806028}
   - {fileID: 3889484335427860827}
   - {fileID: 4094876240831852532}
+  - {fileID: 3988898454089406543}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -320,6 +352,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+--- !u!114 &-808231411788092768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8218323256760932352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f51830b2f7b57cd4786f3d85b008d8dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  targeter: {fileID: 6230287498340296810}
+  projectilePrefab: {fileID: 2023751812661064400, guid: 7389d98771c49e84a8611d49bd0ecc75, type: 3}
+  projectileSpawnPoint: {fileID: 3988898454089406543}
+  fireRange: 5
+  fireRate: 1
+  rotationSpeed: 20
 --- !u!1001 &8218323256787779559
 PrefabInstance:
   m_ObjectHideFlags: 0
