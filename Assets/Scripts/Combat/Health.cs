@@ -14,6 +14,7 @@ public class Health : NetworkBehaviour
     public event Action ServerOnDie;
 
     public event Action<int, int> ClientOnHealthUpdated;
+    public event Action ShowHealthBar;
 
     #region Server
 
@@ -32,8 +33,6 @@ public class Health : NetworkBehaviour
         if (currentHealth != 0) { return; }
 
         ServerOnDie?.Invoke();
-
-        Debug.Log("We Died");
     }
 
     #endregion
@@ -43,6 +42,7 @@ public class Health : NetworkBehaviour
     private void HandleHealthUpdated(int oldHealth, int newHealth)
     {
         ClientOnHealthUpdated?.Invoke(newHealth, maxHealth);
+        ShowHealthBar?.Invoke();
     }
 
     #endregion
