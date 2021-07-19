@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: -808231411788092768}
   - component: {fileID: 8985302170077490888}
   - component: {fileID: 1919569142757592910}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Unit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -413,6 +413,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8218323256760932367}
     m_Modifications:
+    - target: {fileID: 5419951865868883118, guid: 1358facde7fcd8040850723ced41fc85, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419951866177040277, guid: 1358facde7fcd8040850723ced41fc85, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5419951866177040277, guid: 1358facde7fcd8040850723ced41fc85, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -505,6 +513,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthBarCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5419951867052592235, guid: 1358facde7fcd8040850723ced41fc85, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1358facde7fcd8040850723ced41fc85, type: 3}
 --- !u!1 &7264340975531397174 stripped
@@ -590,6 +602,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 30b7a0977d95f874bbd712d66dfce9b7, type: 3}
       propertyPath: m_Name
       value: tank with lazer cannon
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 30b7a0977d95f874bbd712d66dfce9b7, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30b7a0977d95f874bbd712d66dfce9b7, type: 3}
