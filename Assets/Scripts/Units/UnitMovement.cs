@@ -1,4 +1,5 @@
 using Mirror;
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
@@ -8,6 +9,16 @@ public class UnitMovement : NetworkBehaviour
     [SerializeField] NavMeshAgent _agent = null;
     [SerializeField] Targeter _targeter = null;
     [SerializeField] float chaseRange = 10f;
+
+    public override void OnStartServer()
+    {
+        GameOverHandler.ServerOnGameOver += ServerHandleGameOver;
+    }
+
+    public override void OnStopServer()
+    {
+        GameOverHandler.ServerOnGameOver += ServerHandleGameOver;
+    }
 
     [ServerCallback]
     private void Update()
@@ -43,5 +54,11 @@ public class UnitMovement : NetworkBehaviour
         if (!NavMesh.SamplePosition(_destination, out NavMeshHit hit, 1f, NavMesh.AllAreas)) { return; } //If is not a valid position
         
         _agent.SetDestination(hit.position);
+    }
+
+    [Server]
+    private void ServerHandleGameOver()
+    {
+        _agent.ResetPath();
     }
 }
