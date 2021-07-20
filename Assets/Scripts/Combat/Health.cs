@@ -57,7 +57,9 @@ public class Health : NetworkBehaviour
     private void HandleHealthUpdated(int oldHealth, int newHealth)
     {
         ClientOnHealthUpdated?.Invoke(newHealth, maxHealth);
-        ShowHealthBar?.Invoke();
+
+        if (newHealth < maxHealth)
+            ShowHealthBar?.Invoke();
     }
 
     #endregion
