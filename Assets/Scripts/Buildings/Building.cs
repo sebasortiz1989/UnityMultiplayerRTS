@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Building : NetworkBehaviour
 {
+    [SerializeField] private GameObject buildingPreview = null;
     [SerializeField] Sprite icon = null;
     [SerializeField] int id = -1;
     [SerializeField] int price = 100;
@@ -19,6 +20,8 @@ public class Building : NetworkBehaviour
     public Sprite GetIcon() { return icon; }
     public int GetId() { return id; }
     public int GetPrice() { return price; }
+    public GameObject GetBuildingPreview() { return buildingPreview; }
+
 
     #region Server
     public override void OnStartServer()
