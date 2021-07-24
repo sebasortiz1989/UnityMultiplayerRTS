@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class BuildingButton : NetworkBehaviour, IPointerDownHandler, IPointerUpHandler
+public class BuildingButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField] Building building = null;
     [SerializeField] Image iconImage = null;
@@ -28,7 +28,7 @@ public class BuildingButton : NetworkBehaviour, IPointerDownHandler, IPointerUpH
 
     private void Update()
     {
-        if (player == null)
+        if (player == null && NetworkClient.connection != null)
         {
             player = NetworkClient.connection.identity.GetComponent<RTSPlayer>();
         }
@@ -56,7 +56,7 @@ public class BuildingButton : NetworkBehaviour, IPointerDownHandler, IPointerUpH
 
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, floorMask))
         {
-            // Place building
+            player.CmdTryPlaceBuilding(building.GetId(), hit.point);
         }
 
         Destroy(buildingPreviewInstance);

@@ -38,6 +38,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -6221118562437946401, guid: 3c594d64799e3934280b8876ec5981ed, type: 3}
+      propertyPath: id
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6221118562437946401, guid: 3c594d64799e3934280b8876ec5981ed, type: 3}
       propertyPath: icon
       value: 
       objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
