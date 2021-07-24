@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8365989076998803357}
   - component: {fileID: 8365989076998803356}
   m_Layer: 0
-  m_Name: Text
+  m_Name: BuildingPriceText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Building 1
+  m_Text: 100
 --- !u!114 &8365989076998803356
 MonoBehaviour:
   m_ObjectHideFlags: 0
