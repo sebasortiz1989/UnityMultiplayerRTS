@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: id
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4839072073888719495, guid: 3c594d64799e3934280b8876ec5981ed, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5277426218806094649, guid: 3c594d64799e3934280b8876ec5981ed, type: 3}
       propertyPath: m_Name
       value: Unit Base
